@@ -1,1 +1,3 @@
-show databases;
+use test;
+
+select * from student;
