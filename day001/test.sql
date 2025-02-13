@@ -1,3 +1,3 @@
 use test;
 
-select * from student order by score desc limit 3;
+select major, count(major) as 학생수 from student group by major having count(major) < 3;
