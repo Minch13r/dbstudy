@@ -1,21 +1,17 @@
 use shop;
 
-create table product (
+create table buy (
     -- 번호
     num int auto_increment,
-    -- type_a
-    type_a varchar(50) not null,
-    -- type_b
-    type_b varchar(50) not null,
-    -- 이름
-    name varchar(100) not null,
+    -- 고객
+    customer varchar(20),
+    -- 제품명
+    producet_name varchar(100),
     -- 가격
     price int default 0,
-    -- 개수
-    amount int default 100,
-    -- 판매개수
-    sale_amount int default 0,
-    -- 입고 날짜
-    register_date datetime,
+    -- 사가는 개수
+    amount int default 0,
+    -- 사간 날짜(default는 현재시간)
+    buy_date datetime default now(),
     primary key (num)
 );
