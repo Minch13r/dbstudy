@@ -1,3 +1,3 @@
 use test;
 
-select distinct major from student;
+select gender, avg(score) from student group by gender order by avg(score) desc;
