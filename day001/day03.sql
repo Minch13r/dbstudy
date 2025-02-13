@@ -1,3 +1,3 @@
 use shop;
 
-select product_name, sum(amount) from buy group by product_name;
+select product_name, sum(price) from buy group by product_name;
