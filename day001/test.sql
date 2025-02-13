@@ -1,3 +1,3 @@
 use test;
 
-update test2 set age = 20 where id in (4,5);
+select name as '이름', age as '나이' from test2;
