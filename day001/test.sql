@@ -1,3 +1,3 @@
 use test;
 
-select name from student where address = 'suwon' or address = 'seoul';
+select * from student where address like 's%';
