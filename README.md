@@ -31,7 +31,7 @@
 ## 학습 환경 설정 ⚙️
 ```bash
 # MySQL 버전
-MySQL 8.0
+MySQL 8.0.40
 
 # 개발 도구
 - MySQL Workbench
