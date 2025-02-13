@@ -1,4 +1,4 @@
 use shop;
 
--- 오늘 판매수량 / 판매합계 조회
-select sum(amount) as 판매수량, sum(price) as 매출 from buy;
+
+select name as 할인상품, price as 정상가, price*0.9 as 할인가 from product where price >=16000;
