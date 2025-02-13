@@ -1,3 +1,3 @@
 use test;
 
-create table if not exists student_4 like student;
+insert into student_4 (select * from student where grade = 4);
