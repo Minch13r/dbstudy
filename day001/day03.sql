@@ -1,3 +1,4 @@
 use shop;
 
-select name as 할인상품, price as 정상가, round(price*0.9) as 할인가 from product where price >=16000;
+
+select month(register_date) as 월별, sum(price) as 월별매출 from product group by 월별 order by 월별 desc;
