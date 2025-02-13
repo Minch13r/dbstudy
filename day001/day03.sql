@@ -1,4 +1,3 @@
 use shop;
 
-
-select type_a ,count(type_a), sum(price * amount) from product group by type_a ;
+select name as 상품명, register_date as 입고된날짜 from product where month(register_date)=11;
