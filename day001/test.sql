@@ -1,3 +1,3 @@
 use test;
 
-select * from student;
+desc student;
