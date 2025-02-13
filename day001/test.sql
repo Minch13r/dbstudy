@@ -1,3 +1,3 @@
 use test;
 
-insert into student_4 (select * from student where grade = 4);
+alter table student add ranking varchar(3) not null after score;
