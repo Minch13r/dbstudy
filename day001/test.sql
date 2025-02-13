@@ -1,3 +1,3 @@
 use test;
 
-select name as '이름', age as '나이' from test2;
+select name from student where major='computer';
