@@ -1,6 +1,3 @@
 use shop;
 
-select num, type_a, type_b,
-       case when price >= 40000 then concat(name, '(할인상품)')
-       else name
-       end as name, price, amount, sale_amount, register_date from product;
+select month(register_date) as 월별, sum(price * sale_amount) as 월별매출 from product group by 월별 order by 월별 desc;
