@@ -1,3 +1,3 @@
 use test;
 
-select ranking, count(ranking) as 인원 from student group by ranking;
+select * from student order by score desc limit 3;
