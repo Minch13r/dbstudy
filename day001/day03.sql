@@ -1,4 +1,4 @@
 use shop;
 
 
-select name as 할인상품, price as 정상가, price*0.9 as 할인가 from product where price >=16000;
+select type_a ,count(type_a), sum(price * amount) from product group by type_a ;
