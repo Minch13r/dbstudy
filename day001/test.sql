@@ -1,3 +1,3 @@
 use test;
 
-select name from student where score between 70 and 90;
+select name from student where address = 'suwon' or address = 'seoul';
