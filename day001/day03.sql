@@ -1,4 +1,4 @@
 use shop;
 
-
-select month(register_date) as 월별, sum(price) as 월별매출 from product group by 월별 order by 월별 desc;
+-- 연-월로 나타내기
+select date_format(register_date, '%y-%m') as mon, sum(price) as sum from product group by mon order by mon;
