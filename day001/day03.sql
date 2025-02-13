@@ -1,4 +1,5 @@
 use shop;
 
--- 연-월로 나타내기
-select date_format(register_date, '%y-%m') as mon, sum(price) as sum from product group by mon order by mon;
+
+
+select num, CONCAT(LEFT(customer, 1), 'O', RIGHT(customer, 1)) as customer, product_name, price, amount, total, buy_date FROM buy
