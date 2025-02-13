@@ -1,3 +1,3 @@
 use test;
 
-select major, sum(score) from student group by major having sum(score) >= 250;
+alter table student add grade int after age;
