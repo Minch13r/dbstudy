@@ -1,3 +1,6 @@
 use school;
 
-select at_score as 학점, count(at_score) as 인원수 from attend group by at_score;
+select * from
+attend a inner join student s
+on a.at_std_num = s.std_num
+where at_repetition = 'y';
