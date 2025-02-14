@@ -1,6 +1,3 @@
 use school;
 
-update attend set at_repetition = case
-    when (at_score = 'F' OR at_attend <= 2) then 'Y'
-    else 'N'
-    end where at_term = 1;
+select at_score as 학점, count(at_score) as 인원수 from attend group by at_score;
