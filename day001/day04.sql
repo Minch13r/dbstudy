@@ -1,6 +1,7 @@
 use school;
 
-select * from
-attend a inner join student s
+select s.std_num, s.std_name, a.at_score, a.at_repetition
+from attend a
+inner join student s
 on a.at_std_num = s.std_num
-where at_repetition = 'y';
+where a.at_repetition = 'y';
