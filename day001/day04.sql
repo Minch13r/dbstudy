@@ -1,9 +1,9 @@
 use school;
 
--- 강철수가 수강하고 있는 과목명과 교수명 출력
-select s.std_name, c.co_name, c.co_professor from student s
+-- 프로그래밍 일반 과목을 듣는 학생 명단 출력 (학번, 이름, 학과)
+select s.std_num, s.std_name, s.std_major from student s
 inner join attend a
 on s.std_num = a.at_std_num
 inner join course c
 on a.at_co_code = c.co_code
-where s.std_name = '강철수';
+where c.co_name = '프로그래밍일반';
