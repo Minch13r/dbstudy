@@ -1,8 +1,7 @@
 use school;
 
--- 과목별 (co_name) 별 중간, 기말 출석 과제 합계
-select c.co_name, sum(a.at_mid) as 중간, sum(a.at_final) as 기말, sum(a.at_attend) as 출석, sum(a.at_hw) as 과제
-from course c
-inner join attend a
-on c.co_code = a.at_co_code
-group by c.co_name;
+-- 학점별 중간, 기말, 출석, 과제 평균 (null은 제외, 학점별 오름차순)
+select a.at_score, avg(a.at_mid) as 중간평균, avg(a.at_final) as 기말평균, avg(a.at_attend) as 출석평균, avg(a.at_hw) as 과제평균
+from attend a
+where a.at_score is not null
+group by a.at_score order by a.at_score asc;
