@@ -1,9 +1,6 @@
 use school;
 
-update attend set at_score = case
-    when (at_mid + at_final + at_hw + at_attend) >= 90 then 'A'
-    when (at_mid + at_final + at_hw + at_attend) >= 80 then 'B'
-    when (at_mid + at_final + at_hw + at_attend) >= 70 then 'C'
-    when (at_mid + at_final + at_hw + at_attend) >= 60 then 'D'
-    else 'F'
+update attend set at_repetition = case
+    when (at_score = 'F' OR at_attend <= 2) then 'Y'
+    else 'N'
     end where at_term = 1;
